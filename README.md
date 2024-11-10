@@ -3,7 +3,7 @@
 This project addresses the challenge of rumor verification on social media, specifically on Twitter (now known as Platform X), by leveraging evidence from authoritative accounts in both Arabic and English. Our proposed system is designed as a three-stage process that includes **evidence retrieval**, **stance detection**, and **rumor verification**. The system architecture is built upon advanced transformer-based models.
 ## Project Overview
 
-1. **Evidence Retrieval**: We utilize the SBERT (Sentence-BERT) model to generate dense embeddings for rumors and their corresponding timeline tweets. This process captures semantic meanings in sentences, enabling efficient comparison through cosine similarity. The top-ranking tweets are selected as evidence candidatesx based on their relevance to the rumor.
+1. **Evidence Retrieval**: We utilize the SBERT (Sentence-BERT) model to generate dense embeddings for rumors and their corresponding timeline tweets. This process captures semantic meanings in sentences, enabling efficient comparison through cosine similarity. The top-ranking tweets are selected as evidence candidates based on their relevance to the rumor.
 
 2. **Stance Detection**: To classify the stance of each evidence candidate with respect to the rumor, we fine-tuned the multilingual XLM-RoBERTa model on a bilingual dataset of English and Arabic samples. This model categorizes evidence as either:
    - **SUPPORTS**
@@ -28,7 +28,7 @@ The fine-tuned models, including **XLM-RoBERTa** and **KEMLM**, are available fo
 
 - **[Download Fine-tuned Models (XLM-RoBERTa and KEMLM)](https://drive.google.com/file/d/1PdqVoKVTvKeZJJ1ND9IDEdgh60Ej0ImN/view?usp=share_link)**
 
-After downloading, unzip the file and place the extracted models in the `traind_models/` directory within the project structure.
+After downloading, unzip the file and place the extracted models in the `src/traind_models/` directory within the project structure.
 
 ## Setup and Dependencies
 
@@ -41,7 +41,7 @@ After downloading, unzip the file and place the extracted models in the `traind_
    pip install -r requirements.txt
 
 2. **Adjust Data Paths**:
-Before running the notebooks, ensure the data paths are correctly set to match the project structure. Open each notebook and update the data paths as needed to match your local setup (e.g., `data/` directory for training datasets or `models/` directory for saved models). This step is necessary to load data and model files correctly.
+Before running the notebooks, ensure the data paths are correctly set to match the project structure. Open each notebook and update the data paths as needed to match your local setup (e.g., `data/` directory for training datasets or `traind_models/` directory for saved models). This step is necessary to load data and model files correctly.
 
 3. **Run the Notebooks**:
 After adjusting the data paths, you can run the notebooks to explore each stage of the model, including evidence retrieval, stance detection, and rumor verification.
